@@ -1,0 +1,27 @@
+Mon Nov 22 19:36:59 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 19:50:36 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 19:55:28 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 19:57:34 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 19:58:12 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 20:01:49 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 20:13:21 2021  ERROR: upload aaaa.txt, mode: netascii, 文件不存在!
+Mon Nov 22 20:13:58 2021  ERROR: upload aaaa.txt, mode: netascii, 文件不存在!
+Mon Nov 22 20:17:04 2021  ERROR: upload , mode: netascii, 接收不到服务器响应.
+Mon Nov 22 20:17:10 2021  INFO: upload aaaa.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.04 s
+Mon Nov 22 20:18:55 2021  INFO: upload aaaa.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.01 s
+Mon Nov 22 20:19:30 2021  ERROR: upload adaaa.txt, mode: netascii, 文件不存在!
+Mon Nov 22 20:19:40 2021  WARN: upload aaaa.txt, mode: netascii, 无法接收ACK，重传
+Mon Nov 22 20:19:45 2021  WARN: upload aaaa.txt, mode: netascii, 无法接收ACK，重传
+Mon Nov 22 20:19:49 2021  WARN: upload aaaa.txt, mode: netascii, 无法接收ACK，重传
+Mon Nov 22 20:19:49 2021  ERROR: upload aaaa.txt, mode: netascii, 无法从服务器接收信息!
+Mon Nov 22 20:20:00 2021  INFO: upload aaaa.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.01 s
+Mon Nov 22 20:44:24 2021  INFO: upload aaaa.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.01 s
+Mon Nov 22 20:44:31 2021  INFO: upload aaaa.txt, mode: octet, 大小: 2.7 kB, 花费时间: 0.01 s
+Mon Nov 22 20:45:02 2021  ERROR: download G:\User\Desktop\1.txt as , mode: octet, 创建文件 "" 失败.
+Mon Nov 22 20:45:12 2021  ERROR: download G:\User\Desktop\1.txt as , mode: octet, 创建文件 "" 失败.
+Mon Nov 22 20:45:22 2021  ERROR: download G:\\User\\Desktop\\1.txt as , mode: octet, 创建文件 "" 失败.
+Mon Nov 22 20:49:40 2021  INFO: download aaaa.txt as G:\User\Desktop\1.txt, mode: netascii, 大小: 2.7 kB, 消耗时间: 0.10 s
+Mon Nov 22 21:05:36 2021  ERROR: upload G:\User\Desktop\1.png, mode: octet, 接收不到服务器响应.
+Mon Nov 22 21:15:30 2021  INFO: upload G:\User\Desktop\1.png, mode: octet, 大小: 0.0 kB, 花费时间: 0.00 s
+Mon Nov 22 21:17:48 2021  INFO: upload G:\User\Desktop\1.png, mode: netascii, 大小: 0.0 kB, 花费时间: 0.00 s
+Mon Nov 22 21:22:14 2021  INFO: upload G:\User\Desktop\1.png, mode: octet, 大小: 2504.2 kB, 花费时间: 261.17 s

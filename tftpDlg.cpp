@@ -106,6 +106,8 @@ BOOL CtftpDlg::OnInitDialog()
 	((CButton*)GetDlgItem(IDC_RADIO2))->SetCheck(TRUE); //选上
 	((CButton*)GetDlgItem(IDC_RADIO3))->SetCheck(FALSE);//不选上
 
+	reupnum = 0;
+	redownnum = 0;
 
 	printout = ("");
 

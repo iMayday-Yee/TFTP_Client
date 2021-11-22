@@ -88,7 +88,8 @@ public:
 	int charLen;
 	int len;
 	TCHAR* buftemp;
-
+	int reupnum;
+	int redownnum;
 
 	CButton netascii_radio;
 	CButton octet_radio;
@@ -205,8 +206,10 @@ public:
 		int x = strlen(p);
 		char ch = '\\';
 		char* q = strrchr(p, ch) + 1;
-
-		return q;
+		if (strrchr(p, ch) == NULL)
+			return p;
+		else
+			return q;
 	}
 	
 
@@ -214,6 +217,8 @@ public:
 	{
 		//CDlgup* temp_UPLOAD = (CDlgup*)AfxGetMainWnd();
 		//MessageBox(filenames);
+
+		reupnum = 0;
 
 		USES_CONVERSION;
 
@@ -403,6 +408,7 @@ public:
 					// 未收到ACK，重传
 					// 写入日志
 					// 获取时间
+					reupnum++;
 					time(&rawTime);
 					// 转化为当地时间
 					info = localtime(&rawTime);
@@ -460,7 +466,7 @@ public:
 		fclose(fp);
 		consumeTime = ((double)(end - start)) / CLK_TCK;
 		temps.Empty();
-		sprintf_s(tempc, "上传文件大小: %.1f kB 花费时间: %.2f s", transByte / 1024, consumeTime);
+		sprintf_s(tempc, "上传文件大小: %.1f kB  花费时间: %.2f s", transByte / 1024, consumeTime);
 		charLen = strlen(tempc);
 		//计算多字节字符的大小，按字符计算。
 		len = MultiByteToWideChar(CP_ACP, 0, tempc, charLen, NULL, 0);
@@ -476,6 +482,7 @@ public:
 		printout = printout + temps + L"\r\n";
 		UpdateData(FALSE);
 
+		
 		temps.Empty();
 		sprintf_s(tempc, "上传速度: %.1f kB/s", transByte / (1024 * consumeTime));
 		charLen = strlen(tempc);
@@ -493,6 +500,23 @@ public:
 		printout = printout + temps + L"\r\n";
 		UpdateData(FALSE);
 
+
+		temps.Empty();
+		sprintf_s(tempc, "重传文件次数: %d  丢包率: %.2f%%", reupnum, 100.0 * reupnum / block);
+		charLen = strlen(tempc);
+		//计算多字节字符的大小，按字符计算。
+		len = MultiByteToWideChar(CP_ACP, 0, tempc, charLen, NULL, 0);
+		//为宽字节字符数组申请空间，数组大小为按字节计算的多字节字符大小
+		buftemp = new TCHAR[len + 1];
+		//多字节编码转换成宽字节编码
+		MultiByteToWideChar(CP_ACP, 0, tempc, charLen, buftemp, len);
+		buftemp[len] = '\0'; //添加字符串结尾，注意不是len+1
+		//将TCHAR数组转换为CString
+		temps.Append(buftemp);
+		//删除缓冲区
+		delete[]buftemp;
+		printout = printout + temps + L"\r\n";
+		UpdateData(FALSE);
 
 		// 获取时间
 		time(&rawTime);

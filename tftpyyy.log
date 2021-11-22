@@ -25,3 +25,7 @@ Mon Nov 22 21:05:36 2021  ERROR: upload G:\User\Desktop\1.png, mode: octet, 接收
 Mon Nov 22 21:15:30 2021  INFO: upload G:\User\Desktop\1.png, mode: octet, 大小: 0.0 kB, 花费时间: 0.00 s
 Mon Nov 22 21:17:48 2021  INFO: upload G:\User\Desktop\1.png, mode: netascii, 大小: 0.0 kB, 花费时间: 0.00 s
 Mon Nov 22 21:22:14 2021  INFO: upload G:\User\Desktop\1.png, mode: octet, 大小: 2504.2 kB, 花费时间: 261.17 s
+Mon Nov 22 21:31:33 2021  INFO: upload G:\User\Desktop\1.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.04 s
+Mon Nov 22 21:32:27 2021  INFO: upload G:\User\Desktop\1.txt, mode: netascii, 大小: 2.7 kB, 花费时间: 0.01 s
+Mon Nov 22 21:44:15 2021  ERROR: upload 1.txt, mode: netascii, 接收不到服务器响应.
+Mon Nov 22 21:45:52 2021  INFO: upload G:\User\Desktop\1.txt, mode: netascii, 大小: 17.8 kB, 花费时间: 0.07 s
